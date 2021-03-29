@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "firstName": "John",
+        "lastName": "Doe",
+        "nickname": "Johnny",
+        "favoriteSubject": "English"
+    },
+    {
+        "id": "2",
+        "firstName": "Magnús",
+        "lastName": "Magnússon",
+        "nickname": "Maggi",
+        "favoriteSubject": "Writing"
+    },
+    {
+        "id": "3",
+        "firstName": "Jens",
+        "lastName": "Helgi",
+        "nickname": "Jenni",
+        "favoriteSubject": "Sports"
+    },
+    {
+        "id": "4",
+        "firstName": "Sakke",
+        "lastName": "Henrikki",
+        "nickname": "Rikki",
+        "favoriteSubject": "Maths"
+    },
+    {
+        "id": "5",
+        "firstName": "Jesús",
+        "lastName": "Kristur",
+        "nickname": "J-Dawg",
+        "favoriteSubject": "History"
+    },
+    {
+        "id": "6",
+        "firstName": "Joe",
+        "lastName": "Johnson",
+        "nickname": "Joey",
+        "favoriteSubject": "Art"
+    }
+]
