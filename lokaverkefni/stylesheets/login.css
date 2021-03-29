@@ -1,0 +1,105 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: rgb(10, 10, 10);
+    color: #fff;
+    overflow: hidden;
+    -webkit-touch-callout: none !important;
+}
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#container {
+    width: 1920px;
+    height: 1080px;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
+#login-container {
+    position: absolute;
+    background-color: rgb(15, 15, 15);
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    padding: 15px 15px 60px 10px;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#login {
+    position: relative;
+    display: block;
+    padding: 0px 0px 0px 0px;
+}
+
+span.login-span {
+    display: block;
+    width: 10%;
+    width: 75px;
+}
+
+#login input {
+    width: 200px;
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+}
+
+#login #login-btn {
+    position: relative;
+    display: block;
+    margin: 10px 0px 0px 0px;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+#show-pswrd-btn-container {
+    position: relative;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 5px 0px 0px 0px;
+}
+
+#show-pswrd-btn-container button#show {
+    position: relative;
+    width: 122px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#message {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 10px 0px;
+}
+
+#error-msg {
+    position: absolute;
+    padding: 10px 0px 10px 0px;
+    color: red;
+}
+
+#success-msg {
+    position: absolute;
+    padding: 10px 0px 10px 0px;
+    color: green;
+}

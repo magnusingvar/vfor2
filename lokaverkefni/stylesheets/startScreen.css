@@ -1,0 +1,43 @@
+#startScreen {
+    position: absolute;
+    text-align: center;
+}
+
+#welcome-test {
+    position: absolute;
+    top: 70%;
+    width: 100px;
+    height: 100px;
+}
+
+#game-options {
+    position: relative;
+    width: auto;
+    display: inline-block;
+}
+
+.game-title {
+    position: relative;
+    display: block;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 0px 20px 0px;
+
+    color: white;
+}
+
+.game-option {
+    position: relative;
+    display: block;
+    width: auto;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+
+    font-size: 20pt;
+    color: white;
+    cursor: pointer;
+}
+
+.game-option:hover {
+    color: violet;
+}
