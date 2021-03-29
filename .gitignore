@@ -1,8 +1,10 @@
 # Ignore all changes to files and folders
-# in the "old" folder and in the "node_modules" 
-# folder and also ignore all changes to the 
-# .eslintrc.json and .eslintignore files
+# in the "old" and "old.complete" folder 
+# and in the "node_modules" folder and also 
+# ignores all changes to the .eslintrc.json 
+# and .eslintignore files
 old/
+old.complete
 node_modules/
 .eslintrc.json
 .eslintignore
