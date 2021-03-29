@@ -1,0 +1,16 @@
+/* Loading Screen */
+
+#loadingscreen {
+    background: rgba(100, 100, 100, 0.7);
+}
+
+#loadingmessage {
+    position: relative;
+    top: 400px;
+    text-align: center;
+
+    height: 48px;
+    color: white;
+    background: url("../images/loader.gif") no-repeat center;
+    font: 12px Arial;
+}
