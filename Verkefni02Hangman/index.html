@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hangman</title>
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+        <script src="script.js" type="module"></script>
+    </head>
+    <body>
+        <div id="bg">
+            <p>Hangman</p>
+            <div id="category"></div>
+            <input type="text" maxlength="1" name="letter" id="letter" placeholder="Letter" autocomplete="off">
+            <div id="hidden"></div>
+            <label for="wrongLetters">Wrong Letters:</label>
+            <div id="wrongLetters"></div>
+            <div id="message"></div>
+            <div id="win"></div>
+            <div id="tries"></div>
+            <div id="playAgain" onclick="window.location.reload()">
+                <button id="playAgain-btn">Play Again</button>
+            </div>
+        </div>
+    </body>
+</html>
