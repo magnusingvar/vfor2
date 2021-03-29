@@ -1,5 +1,8 @@
-/node_modules
+# Ignore all changes to files and folders
+# in the "old" folder and in the "node_modules" 
+# folder and also ignore all changes to the 
+# .eslintrc.json and .eslintignore files
+old/
+node_modules/
 .eslintrc.json
 .eslintignore
-package-lock.json
-package.json
