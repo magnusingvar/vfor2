@@ -1,72 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+* {font-family: 'Roboto', sans-serif;}
+
 body {
     width: 100%;
-    height: 100%;
-    background: rgb(10, 10, 10);
+    background: #444242;
     color: #fff;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-touch-callout: none !important;
 }
 
 #wrapper {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    min-width: 211.667px;
+    width: 100%;
+    height: 650px;
+    position: relative;
 }
 
 #container {
-    width: 1920px;
-    height: 1080px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container h2 {
+    width: 100%;
+    text-align: center;
 }
 
 .layer {
     width: 100%;
     height: 100%;
-    position: absolute;
     display: none;
 }
 
-#login-container {
-    position: absolute;
-    background-color: rgb(15, 15, 15);
-    width: auto;
+#login-container.layer {
+    background-color: #4b4a4a;
+    width: 317px;
     height: auto;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    padding: 15px 15px 60px 10px;
-    transform: translate(-50%, -50%);
-    margin: auto;
-    align-items: center;
-    border-radius: 8px;
+    /*top: 50%;
+    left: 50%;*/
+    padding: 25px 25px 60px 25px;
+    /*transform: translate(-50%, -50%);
+    align-items: center;*/
+    border: 1px solid #000;
+    border-radius: 12px;
 }
 
 #login {
-    position: relative;
-    display: block;
+    position: inherit;
+    min-width: 120px;
+    max-width: 320px;
+    width: 100%;
+    height: auto;
     padding: 0px 0px 0px 0px;
 }
 
-span.login-span {
-    display: block;
-    width: 10%;
-    width: 75px;
-}
-
-#login input {
-    width: 200px;
-    display: inline-block;
-    margin: 5px 0px 5px 0px;
-}
-
-#login #login-btn {
-    position: relative;
-    display: block;
-    margin: 10px 0px 0px 0px;
-    align-items: center;
-    text-align: center;
+#login .login-span {
+    font-size: 20px;
+    display: flex;
     width: auto;
+    height: auto;
+    margin: 15px 0px 13px 0px;
+}
+
+#login input {  
+    position: relative;
+    background: rgb(235, 235, 235);
+    padding: 0px 5px 0px 5px;
+    margin: 0px 0px 10px 0px;
+    max-width: 307px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
 }
 
 #show-pswrd-btn-container {
@@ -79,9 +87,21 @@ span.login-span {
 
 #show-pswrd-btn-container button#show {
     position: relative;
-    width: 122px;
+    width: auto;
+    height: 40px;
     margin: 0px;
     padding: 0px;
+}
+
+#login #login-btn {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 10px 0px 0px 0px;
+    align-items: center;
+    text-align: center;
+    width: auto;
 }
 
 
@@ -89,17 +109,19 @@ span.login-span {
     position: absolute;
     width: 100%;
     height: auto;
+    font-size: 20px;
     margin: 0px 0px 10px 0px;
 }
 
 #error-msg {
+    font-weight: 700;
     position: absolute;
     padding: 10px 0px 10px 0px;
-    color: red;
+    color: rgb(255, 0, 8);
 }
 
 #success-msg {
     position: absolute;
     padding: 10px 0px 10px 0px;
-    color: green;
+    color: rgb(8,255,8);
 }

@@ -32,17 +32,23 @@ const browser = {
         const maxWidth = window.innerWidth;
         const maxHeight = window.innerHeight;
 
-        const scale = Math.min(maxWidth / 640, maxHeight / 480);
+        const scale = Math.min(maxWidth / 211.667, maxHeight / 480);
+        const loginScale = Math.min(maxWidth / 160, maxHeight / 480);
 
         const container = document.getElementById('container');
+        const test = document.getElementById('login-container');
 
         container.style.transform = `${'translate(-50%, -50%0} scale('}${scale})`;
-
+        test.style.transform = `${'translate(-50%, -50%0} scale('}${loginScale})`;
+        
         browser.scale = scale;
 
-        const width = Math.max(640, Math.min(1920, maxWidth / scale));
+        const width = Math.max(211.667, Math.min(368.667, maxWidth / scale));
+        const testWidth = Math.max(160, Math.min(317, maxWidth / loginScale));
 
         container.style.width = `${width}px`;
+        test.style.width = `${testWidth}px`;
+
     },
 };
 

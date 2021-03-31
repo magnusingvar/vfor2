@@ -17,7 +17,7 @@ submitBtn.addEventListener('click', ()=> {
         if(username == usersObject.users[i].name){
             if(password == usersObject.users[i].password){
                 //alert('success');
-                loginSuccessful('Login successful, redirecting');
+                loginSuccessful('Login successful!');
                 return false;
             } else {
                 wrongLogin('Username or password is incorrect');
@@ -67,6 +67,8 @@ function wrongLogin(txt){
 function loginSuccessful(txt){
     successMsg.innerHTML = txt;
     errorMsg.innerHTML = '';
+    document.cookie = `Username = ${username.value}`;
+    document.cookie =  `Password = ${password.value}`;
     setTimeout(function(){
         document.title = 'Game';
         successMsg.innerHTML = '';
