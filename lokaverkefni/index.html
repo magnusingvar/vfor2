@@ -12,53 +12,107 @@
     <link rel="stylesheet" href="stylesheets/game.css" type="text/css">
 
     <script src="js/login.js" type="module"></script>
+    <script src="js/test.js" type="module"></script>
     <script src="js/script.js"></script>
     <script src="js/game.js"></script>
 </head>
 <body>
 <div id="wrapper">
     <div id="container">
-        <h2>Login</h2>
         <div id="login-container" class="layer">
-            <div id="login">
-                <span class="login-span">Username</span>
-                <input type="text" id="username">
-                <span class="login-span">Password</span>
-                <input type="password" id="password">
+            <div id="login-form-container">
+                <div id="login">
+                    <span class="login-span">Username</span>
+                    <input type="text" id="username">
+                    <span class="login-span">Password</span>
+                    <input type="password" id="password">
 
-                <div id="show-pswrd-btn-container">
-                    <button id="show">Show password</button>
-                    <!--
-                    <input type="checkbox" id="show-pswrd-btn"> 
-                    <span id="show-pswrd">Show password</span>
-                    -->
-                </div>
+                    <div id="show-pswrd-btn-container">
 
-                <button id="login-btn">Login</button>
-                <div id="message">
-                    <div id="error-msg"></div>
-                    <div id="success-msg"></div>
-                </div>
+                        <label class="chck-box-container">
+                            <input type="checkbox" id="pswrd-chck-box" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <div class="chck-box-txt-container">
+                            <div class="chck-box-txt">
+                                <span class="show-txt">Show password</span>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <button id="login-btn"></button>
+                    <div id="message"></div>
+                        <div id="error-msg"></div>
+                        <div id="success-msg"></div>
+                 </div>
             </div>
         </div>
-    
+
         <div id="startScreen" class="layer">
             <span id="welcome-test"></span>
+            <span class="game-title" id="game-title"></span>
 
-            <span class="game-title">Text based adventure game</span>
-
-        <div id="game-options">
-            <span class="game-option" onclick="game.start();">Start</span>
-            <span class="game-option" onclick="game.exit();">Exit</span>
-        </div>
-        
+            <div id="game-options">
+                <span class="game-option" onclick="game.start();">Start</span>
+                <span class="game-option" onclick="game.exit();">Exit</span>
+            </div>
         </div>
 
         <div id="game" class="layer">
             <span>this is where the game is supposed to go</span>
             <button class="btn">Go back</button>
         </div>
+
     </div>
 </div>
+
+        <!--<div id="login-container" class="layer">
+            <form id="login" method="POST">
+                <span class="login-span">Username</span>
+                <input type="text" id="username">
+                <span class="login-span">Password</span>
+                <input type="password" id="password">
+            
+
+
+                <div id="show-pswrd-btn-container">
+
+                    <label class="chck-box-container">
+                        <input type="checkbox" id="pswrd-chck-box" />
+                        <span class="checkmark"></span>
+                    </label>
+                
+                    <div class="chck-box-txt-container">
+                        <div class="chck-box-txt">
+                            Show password
+                        </div>
+                        <span>Show password</span>
+                    </div>
+                -->
+                      
+                    
+                    <!--
+                    <div id="pswrd-txt">
+                        Show password
+                    </div>
+                    --> 
+                    <!--
+                    <button id="show">Show password</button>
+                    -->
+                    <!--
+                    <input type="checkbox" id="show-pswrd-btn"> 
+                    <span id="show-pswrd">Show password</span>
+
+                </div>
+
+
+                <button id="login-btn">Login</button>
+                <div id="message">
+                    <div id="error-msg"></div>
+                    <div id="success-msg"></div>
+                </div>
+                                                    -->
+    
 </body>
 </html>

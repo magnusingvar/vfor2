@@ -32,8 +32,8 @@ const browser = {
         const maxWidth = window.innerWidth;
         const maxHeight = window.innerHeight;
 
-        const scale = Math.min(maxWidth / 211.667, maxHeight / 480);
-        const loginScale = Math.min(maxWidth / 160, maxHeight / 480);
+        const scale = Math.min(maxWidth / 50, maxHeight / 100);
+        const loginScale = Math.min(maxWidth / 50, maxHeight / 480);
 
         const container = document.getElementById('container');
         const test = document.getElementById('login-container');
@@ -43,10 +43,10 @@ const browser = {
         
         browser.scale = scale;
 
-        const width = Math.max(211.667, Math.min(368.667, maxWidth / scale));
-        const testWidth = Math.max(160, Math.min(317, maxWidth / loginScale));
+        const width = Math.max(50, Math.min(100, maxWidth / scale));
+        const testWidth = Math.max(50, Math.min(380, maxWidth / loginScale));
 
-        container.style.width = `${width}px`;
+        container.style.width = `${width}%`;
         test.style.width = `${testWidth}px`;
 
     },
