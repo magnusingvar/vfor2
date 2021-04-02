@@ -8,3 +8,5 @@ old.complete
 node_modules/
 .eslintrc.json
 .eslintignore
+.prettierrc
+.prettierignore

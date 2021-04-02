@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "prettier": "^2.2.1"
+  },
   "devDependencies": {
     "eslint": "^7.23.0"
   },
