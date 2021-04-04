@@ -1,0 +1,73 @@
+.chck-box-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.chck-box-container input#pswrd-chck-box {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.chck-box-txt-container {
+    display: flex;
+    margin: 0px 5px 0px 8px;
+    font-size: 1.05rem;
+}
+
+.chck-box-txt {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.chck-box-container:hover input ~ .checkmark {
+    background-color: rgb(168, 168, 168);
+}
+
+.chck-box-container input:checked ~ .checkmark {
+    background-color: #2795fc; /*#5e5e5e;*/
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.chck-box-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.chck-box-container .checkmark:after {
+    left: 11px;
+    top: 5px;
+    width: 5px;
+    height: 15px;
+    border: solid #ffffff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

@@ -6,8 +6,8 @@
 }
 
 body {
-    margin: 0;
-    background: #444242;
+    margin: 0; /*444242*/ /* 282828 */
+    background: #181818 /*302f2f*/;
     color: #fff;
     overflow-x: hidden;
     -webkit-touch-callout: none !important;
@@ -23,35 +23,14 @@ body {
     align-items: center;
     justify-content: center;
 }
-/*#login-wrapper {min-width: auto;}*/
+
 #container {
     min-height: 100vh;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    /*place-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: center center;
-    place-items: center;*/  
-
 }
-
-/*#container {
-    display: block;
-    flex-shrink: 0;
-    margin: 0 auto;
-}
-
-#container h2 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 115px 0px 25px 0px;
-}*/
 
 .layer {
     width: 100%;
@@ -61,165 +40,106 @@ body {
 }
 
 #login-container {
+    position: relative;
     display: flex;
-    background-color: #4b4a4a;
-    /*min-height: auto;*/
+    background-color: #252525; /*4b4a4a*/
+    max-width: 380px;
     max-height: 100%;
     height: auto;
-    border-radius: 8px;
-}
-
-#login-container::before {
-    display: block;
-    font-size: 26px;
-    content: 'Login';
-    text-align: center;
-    padding: 20px 0px 15px 0px;
+    border-radius: 15px;
 }
 
 #login {
-    padding: 0px 20px 10px 20px;
-    /*min-width: 120px;
-    max-width: 320px;
-    width: 100%;
-    height: auto;*/
+    padding: 10px 20px 10px 20px;
 }
 
 #login .login-span {
-    font-size: 20px;
+    font-size: 1.25rem;
     display: flex;
-    width: auto;
+    width: 100%;
     height: auto;
     margin: 15px 0px 12px 0px;
 }
 
-#login input[type=text], input[type=password] {
+#login input[type='text'],
+input[type='password'] {
     width: 100%;
-    height: 40px;
+    height: auto;
+    min-height: 40px;
     padding: 0px 10px;
-    margin: 0px 0;
-    /*display: inline-block;*/
+    margin: 0;
     border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+#bottom {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    margin: 15px 0px 5px 0px;
+    width: auto;
+    min-height: 30px;
 }
 
 #show-pswrd-btn-container {
-    position: relative;
     display: flex;
-    margin: 15px 0px;
+    flex-grow: 1;
+    margin: 4px 0px 4px 0px;
     width: auto;
-    height: auto;
+    height: 30px;
 }
 
-.chck-box-container {
-    display: block;
+#login-btn-container {
+    display: flex;
+    flex-grow: 1;
+    margin: 4px 0px 4px 0px;
+    width: auto;
+    height: 30px;
+}
+
+#login-btn-container #login-btn {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 0px;
-    cursor: pointer;
-    font-size: auto;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-  
-.chck-box-container input#pswrd-chck-box {
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.chck-box-txt-container {
-      display: flex;
-      margin: 0px 0px 0px 10px;
-      min-height: 25px;
-}
-
-.chck-box-txt {
-    display: flex;  
-    align-items: center;
-}
-  
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-}
-  
-.chck-box-container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-  
-.chck-box-container input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-  
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-  
-.chck-box-container input:checked ~ .checkmark:after {
-    display: block;
-}
-  
-.chck-box-container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-} 
-
-#login #login-btn {
-    position: relative;
+    color: #fff;
+    background-color: #2795fc;
+    border: none;
     display: block;
     margin: 0px;
-    width: auto;
-    height: 40px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
     align-items: center;
 }
 
-#login-btn:hover { cursor: pointer; }
+#login-btn:hover {
+    cursor: pointer;
+}
+
+#message-container {
+    position: relative;
+    display: block;
+    max-height: 40px;
+    height: auto;
+    padding: 10px 20px;
+}
 
 #message {
     position: relative;
-    font-size: 20px;
-    min-height: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    font-size: 1.1rem;
     height: auto;
     margin: 0;
-    padding: 10px 0px;
 }
 
 .success {
-    color: rgb(8,255,8);
+    color: rgb(8, 255, 8);
 }
 
 .error {
     font-weight: 700;
     color: rgb(255, 0, 8);
 }
-
-/*#error-msg {
-    font-weight: 700;
-    position: absolute;
-    padding: 10px 0px 10px 0px;
-    color: rgb(255, 0, 8);
-}
-
-#success-msg {
-    position: absolute;
-    padding: 10px 0px 10px 0px;
-    color: rgb(8,255,8);
-}*/

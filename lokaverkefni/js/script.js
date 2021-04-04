@@ -1,5 +1,4 @@
 const browser = {
-
     init() {
         browser.hideScreens();
         browser.showScreen('login-container');
@@ -31,20 +30,20 @@ const browser = {
     resize() {
         const maxWidth = window.innerWidth;
         const maxHeight = window.innerHeight;
-
-        const scale = Math.min(maxWidth / 50, maxHeight / 100);
-        const loginScale = Math.min(maxWidth / 50, maxHeight / 480);
+    
+        const scale = Math.min(maxWidth / 15, maxHeight / 100);
+        const loginScale = Math.min(maxWidth / 132, maxHeight / 360);
 
         const container = document.getElementById('container');
         const test = document.getElementById('login-container');
 
         container.style.transform = `${'translate(-50%, -50%0} scale('}${scale})`;
         test.style.transform = `${'translate(-50%, -50%0} scale('}${loginScale})`;
-        
+
         browser.scale = scale;
 
         const width = Math.max(50, Math.min(100, maxWidth / scale));
-        const testWidth = Math.max(50, Math.min(380, maxWidth / loginScale));
+        const testWidth = Math.max(132, Math.min(340, maxWidth / loginScale));
 
         container.style.width = `${width}%`;
         test.style.width = `${testWidth}px`;

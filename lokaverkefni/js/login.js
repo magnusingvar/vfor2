@@ -53,6 +53,7 @@ function wrongLogin(txt){
 
     setTimeout(function(){
         message.innerHTML = '';
+        message.className = '';
     }, 6000);
     return false;
 }
@@ -64,6 +65,7 @@ function loginSuccessful(txt){
     setTimeout(function(){
         document.title = 'Game';
         message.innerHTML = '';
+        message.className = '';
     }, 1000);
 
     // Eftir að 1 sekúnda er liðin, þá keyrir það upp 'showScreen' sem birtir logged-in

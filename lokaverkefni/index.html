@@ -8,6 +8,7 @@
     <title>Login</title>
     
     <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/checkbox.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/startScreen.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/game.css" type="text/css">
 
@@ -23,29 +24,33 @@
             <div id="login-form-container">
                 <div id="login">
                     <span class="login-span">Username</span>
-                    <input type="text" id="username">
+                    <input type="text" id="username" autocomplete="off">
                     <span class="login-span">Password</span>
-                    <input type="password" id="password">
-
-                    <div id="show-pswrd-btn-container">
-
-                        <label class="chck-box-container">
-                            <input type="checkbox" id="pswrd-chck-box" />
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <div class="chck-box-txt-container">
-                            <div class="chck-box-txt">
-                                <span class="show-txt">Show password</span>
-                            </div>
+                    <input type="password" id="password" autocomplete="off">
+                </div>
+            </div>
+            <div id="bottom">
+                <div id="show-pswrd-btn-container">
+                    <label class="chck-box-container">
+                        <input type="checkbox" id="pswrd-chck-box" />
+                        <span class="checkmark"></span>
+                    </label>
+        
+                    <div class="chck-box-txt-container">
+                        <div class="chck-box-txt">
+                            <span class="show-txt">Show password</span>
                         </div>
                     </div>
-                            
+
+                </div>
+                <div id="login-btn-container">
                     <button id="login-btn"></button>
-                    <div id="message"></div>
-                        <div id="error-msg"></div>
-                        <div id="success-msg"></div>
-                 </div>
+                </div>
+                
+            </div>
+
+            <div id="message-container">
+                <div id="message"></div>
             </div>
         </div>
 
@@ -66,53 +71,5 @@
 
     </div>
 </div>
-
-        <!--<div id="login-container" class="layer">
-            <form id="login" method="POST">
-                <span class="login-span">Username</span>
-                <input type="text" id="username">
-                <span class="login-span">Password</span>
-                <input type="password" id="password">
-            
-
-
-                <div id="show-pswrd-btn-container">
-
-                    <label class="chck-box-container">
-                        <input type="checkbox" id="pswrd-chck-box" />
-                        <span class="checkmark"></span>
-                    </label>
-                
-                    <div class="chck-box-txt-container">
-                        <div class="chck-box-txt">
-                            Show password
-                        </div>
-                        <span>Show password</span>
-                    </div>
-                -->
-                      
-                    
-                    <!--
-                    <div id="pswrd-txt">
-                        Show password
-                    </div>
-                    --> 
-                    <!--
-                    <button id="show">Show password</button>
-                    -->
-                    <!--
-                    <input type="checkbox" id="show-pswrd-btn"> 
-                    <span id="show-pswrd">Show password</span>
-
-                </div>
-
-
-                <button id="login-btn">Login</button>
-                <div id="message">
-                    <div id="error-msg"></div>
-                    <div id="success-msg"></div>
-                </div>
-                                                    -->
-    
 </body>
 </html>

@@ -9,5 +9,5 @@ const game = {
         document.title = 'Login';
         browser.hideScreens();
         browser.showScreen('login-container');
-    }
+    },
 };
