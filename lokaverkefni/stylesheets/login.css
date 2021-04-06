@@ -49,6 +49,34 @@ body {
     border-radius: 15px;
 }
 
+#top {
+    position: relative;
+}
+
+#middle {
+    position: relative;
+}
+
+#bottom {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 20px;
+    margin: 15px 0px 5px 0px;
+    width: auto;
+    min-height: 30px;
+}
+
+#title {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 20px 10px 20px;
+    font-size: 1.2rem;
+}
+
 #login {
     padding: 10px 20px 10px 20px;
 }
@@ -73,21 +101,10 @@ input[type='password'] {
     outline: none;
 }
 
-#bottom {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0px 20px;
-    margin: 15px 0px 5px 0px;
-    width: auto;
-    min-height: 30px;
-}
-
 #show-pswrd-btn-container {
     display: flex;
     flex-grow: 1;
-    margin: 4px 0px 4px 0px;
+    margin: 4px 0px;
     width: auto;
     height: 30px;
 }
@@ -95,7 +112,7 @@ input[type='password'] {
 #login-btn-container {
     display: flex;
     flex-grow: 1;
-    margin: 4px 0px 4px 0px;
+    margin: 4px 0px;
     width: auto;
     height: 30px;
 }
@@ -105,22 +122,22 @@ input[type='password'] {
     color: #fff;
     background-color: #2795fc;
     border: none;
-    display: block;
-    margin: 0px;
-    padding: 0px;
+    border-radius: 4px;
+    margin: 0;
     width: 100%;
     height: 100%;
-    align-items: center;
 }
 
 #login-btn:hover {
     cursor: pointer;
+    opacity: 0.9;
 }
 
 #message-container {
     position: relative;
-    display: block;
-    max-height: 40px;
+    display: flex;
+    max-height: 105px;
+    min-height: 42px;
     height: auto;
     padding: 10px 20px;
 }
