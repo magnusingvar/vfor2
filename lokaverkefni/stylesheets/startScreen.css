@@ -3,13 +3,6 @@
     text-align: center;
 }
 
-#welcome-test {
-    position: absolute;
-    top: 70%;
-    width: 100px;
-    height: 100px;
-}
-
 #game-options {
     position: relative;
     width: auto;

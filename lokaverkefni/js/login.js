@@ -5,12 +5,29 @@ const submitBtn = document.getElementById('login-btn');
 const pswrdChck = document.getElementById('pswrd-chck-box');
 const message = document.getElementById('message');
 
+// If session storage has value of name in users in userObject, go to 
+// start screen and if it already exist take user to game start screen
+window.addEventListener('load',() => {
+    document.title = 'Login';
+    let session = sessionStorage.getItem('name');
+    for (let i = 0; i < usersObject.users.length; i += 1) {
+        if (session === usersObject.users[i].name) {
+            document.title = 'Game';
+            browser.hideScreens();
+            browser.showScreen('startScreen');
+        }
+    }  
+    pswrdChck.checked = false;
+});
+
+// Check if login button is clicked by user
 submitBtn.addEventListener('click', () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
     for (let i = 0; i < usersObject.users.length; i += 1) {
         if (username == usersObject.users[i].name) {
             if (password == usersObject.users[i].password) {
+                sessionStorage.setItem('name', document.getElementById('username').value);
                 loginSuccessful('Login successful!');
                 return false;
             }
@@ -18,7 +35,7 @@ submitBtn.addEventListener('click', () => {
             wrongLogin('Username or password is incorrect');
         }
 
-        // Athugar hvort að username og password sé tómt
+        // Check if username input is empty
         if (username == '') {
             wrongLogin('Username cannot be empty');
         } else if (password == '') {
@@ -27,6 +44,8 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
+// Check if user toggles show password checkbox and if it's checked show
+// the password input but if it's not checked hide the password input.
 pswrdChck.addEventListener('click', () => {
     const password = document.getElementById('password');
     if (pswrdChck.checked) {
@@ -36,8 +55,9 @@ pswrdChck.addEventListener('click', () => {
     }
 });
 
-// Falll sem birtir texta í errorMsg og eftir 4 sekúndur hreinsar hann textan út
-// og birtir '' sem merkir að það sé tómt, tekur einnig 1 af tries
+// If login is not successful assign message div with the class error
+// and insert the text assigned to the function and after 6 seconds
+// make the text empty.
 function wrongLogin(txt) {
     message.innerHTML = txt;
     message.className = 'error';
@@ -48,26 +68,22 @@ function wrongLogin(txt) {
     return false;
 }
 
-// Fall sem segir notanda að innskráning hafi farið í gegn og breytir um vefslóð
+// If login is  successful assign message div with the class success
+// and insert the text assigned to the function and after 1 seconds
+// and after that hide login and show start screen.
 function loginSuccessful(txt) {
     message.innerHTML = txt;
     message.className = 'success';
     setTimeout(function () {
-        document.title = 'Game';
+        document.title = 'Redirecting...';
         message.innerHTML = '';
         message.className = '';
-    }, 1000);
+    }, 500);
 
-    // Eftir að 1 sekúnda er liðin, þá keyrir það upp 'showScreen' sem birtir logged-in
-    // div taggið.
     setTimeout(function () {
+        document.title = 'Game';
         browser.hideScreens();
         browser.showScreen('startScreen');
     }, 1000);
     return false;
 }
-
-window.addEventListener('load',() => {
-    document.cookie = 'SESSION=test';
-    pswrdChck.checked = false;
-}, false);

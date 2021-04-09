@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="user-scalable=no, initial-scale=1,
     maximum-scale=1, minimum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login</title>
+    <title>Text based adventure game</title>
     
     <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/checkbox.css" type="text/css">
@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="stylesheets/game.css" type="text/css">
 
     <script src="js/login.js" type="module"></script>
-    <script src="js/test.js" type="module"></script>
     <script src="js/script.js"></script>
     <script src="js/game.js"></script>
 </head>
@@ -26,58 +25,51 @@
                     <span>Login</span>
                 </div>
             </div>
-
-
             <div id="middle">
                 <div id="login-form-container">
                     <div id="login">
                         <span class="login-span">Username</span>
-                        <input type="text" id="username" placeholder="Username" autocomplete="off">
+                        <input type="text" id="username" name="name" autocomplete="off">
                         <span class="login-span">Password</span>
-                        <input type="password" id="password" placeholder="Password" autocomplete="off">
+                        <input type="password" id="password" name="password" autocomplete="off">
                     </div>
                 </div>
             </div>
-
             <div id="bottom">
                 <div id="show-pswrd-btn-container">
                     <label class="chck-box-container">
                         <input type="checkbox" id="pswrd-chck-box" />
-                        <span class="checkmark"></span>
+                         <span class="checkmark"></span>
                     </label>
-        
                     <div class="chck-box-txt-container">
                         <div class="chck-box-txt">
                             <span class="show-txt">Show password</span>
                         </div>
                     </div>
-
                 </div>
                 <div id="login-btn-container">
-                    <button id="login-btn"></button>
-                </div>
-                
+                    <button id="login-btn">Login</button>
+                </div>     
             </div>
-
             <div id="message-container">
                 <div id="message"></div>
             </div>
+
         </div>
 
         <div id="startScreen" class="layer">
-            <span id="welcome-test"></span>
-            <span class="game-title" id="game-title"></span>
+            <p>Welcome back <span id="name"></span></p>
+            
+            <span class="game-title" id="game-title">Text based adventure game</span>
 
             <div id="game-options">
                 <span class="game-option" onclick="game.start();">Start</span>
-                <span class="game-option" onclick="game.exit();">Exit</span>
+                <span class="game-option" onclick="game.exit();">Logout</span>
             </div>
+
         </div>
 
-        <div id="game" class="layer">
-            <span>this is where the game is supposed to go</span>
-            <button class="btn">Go back</button>
-        </div>
+        <div id="game" class="layer"></div>
 
     </div>
 </div>
