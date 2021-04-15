@@ -7,14 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Text based adventure game</title>
     
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
-    <link rel="stylesheet" href="stylesheets/checkbox.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/startScreen.css" type="text/css">
     <link rel="stylesheet" href="stylesheets/game.css" type="text/css">
 
     <script src="js/login.js" type="module"></script>
+    <script src="js/game.js" type="module"></script>
     <script src="js/script.js"></script>
-    <script src="js/game.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -39,7 +39,7 @@
                 <div id="show-pswrd-btn-container">
                     <label class="chck-box-container">
                         <input type="checkbox" id="pswrd-chck-box" />
-                         <span class="checkmark"></span>
+                        <span class="checkmark"></span>
                     </label>
                     <div class="chck-box-txt-container">
                         <div class="chck-box-txt">
@@ -58,20 +58,39 @@
         </div>
 
         <div id="startScreen" class="layer">
-            <p>Welcome back <span id="name"></span></p>
-            
             <span class="game-title" id="game-title">Text based adventure game</span>
+            <span class="game-by" id="game-by">by Magnús</span>
+            
+            <div id="welcome">
+                <p>Welcome back <span id="name"></span></p>
+            </div>
 
             <div id="game-options">
-                <span class="game-option" onclick="game.start();">Start</span>
-                <span class="game-option" onclick="game.exit();">Logout</span>
+                <span class="game-option" id="start-game-btn">Start</span>
+                <span class="game-option" id="exit-game-btn">Logout</span>
             </div>
 
         </div>
 
-        <div id="game" class="layer"></div>
+        <div id="game" class="layer">
+            <div id="game-container">
+                <span id="exit-btn">🠔 Exit</span>
+                <div id="game-text-container">
+                    <p id="game-text"></p>
+                </div>
+                <div id="options">
+                    <!--
+                    <button id="option-1" class="option"></button>
+                    <button id="option-2" class="option"></button>
+                    <button id="option-3" class="option"></button>
+                    <button id="option-4" class="option"></button>
+                    -->
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
+
 </body>
 </html>

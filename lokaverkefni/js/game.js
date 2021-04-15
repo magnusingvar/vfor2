@@ -1,20 +1,75 @@
-const game = {
-    start() {
-        document.title = 'Game has started';
-        browser.hideScreens();
-        browser.showScreen('game');
-    },
+import gameTextJson from './gameText.js';
 
-    exit() {
-        document.title = 'Login';
-        sessionStorage.removeItem('name');
-        browser.hideScreens();
-        browser.showScreen('login-container');
-    },
-};
+const textObject = JSON.parse(gameTextJson);
+const startGameBtn = document.getElementById("start-game-btn");
+const exitGameBtn = document.getElementById('exit-game-btn');
+const goBackBtn = document.getElementById('exit-btn');
+const gameOptions = document.getElementById('options');
+const displayText = sessionStorage.getItem("displayText");
 
-// Test
+function getOptionsList(arr) {
+    const tempArray = [];
+    for (const key in arr) {
+        tempArray.push(key);
+    }
+    return tempArray;
+}
+
+if (sessionStorage.getItem("displayText") === null){
+    sessionStorage.setItem('displayText', 0);
+}
+
+// When browser/ window loads up on the start screen
 window.addEventListener('load', () => {
     let session = sessionStorage.getItem('name');
     document.getElementById('name').innerHTML = session;
+
+    const textHTML = document.getElementById('game-text');
+    textHTML.innerHTML = textObject.text[displayText].text;
+    const options = getOptionsList(textObject.text[displayText].options);
+    for(let i = 0; i < options.length; i++){
+        const button = document.createElement("button");
+        button.id = textObject.text[displayText].options[options[i]];
+        button.className = 'option';
+        button.innerHTML = options[i];
+        button.addEventListener('click', ()=>{
+            sessionStorage.setItem('displayText', button.id);
+            location.reload();
+        })
+        gameOptions.appendChild(button);
+    }
+
+    if (sessionStorage.getItem('gameRunning') === "true") {
+        browser.hideScreens();
+        browser.showScreen('game');
+        document.title = 'Game has started';
+        document.location = '#GameStarted';
+    }
+});
+
+// Start Screen
+// When game option start on start screen is clicked
+startGameBtn.addEventListener("click", () => {
+    document.title = 'Game has started';
+    browser.hideScreens();
+    browser.showScreen('game');
+    document.location = '#GameStarted';
+    sessionStorage.setItem('gameRunning', true);
+});
+
+// When game option exit on start screen is clicked
+exitGameBtn.addEventListener('click', () => {
+    document.title = 'Login';
+    sessionStorage.removeItem('name');
+    browser.hideScreens();
+    browser.showScreen('login-container');
+    document.location = '#Login';
+});
+
+// Game
+// When go back button on the game screen is clicked
+goBackBtn.addEventListener('click', () => {
+    location.reload();
+    sessionStorage.setItem('gameRunning', false);
+    sessionStorage.setItem('displayText', 0);
 });

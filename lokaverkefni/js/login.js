@@ -9,10 +9,12 @@ const message = document.getElementById('message');
 // start screen and if it already exist take user to game start screen
 window.addEventListener('load',() => {
     document.title = 'Login';
+    document.location = '#Login';
     let session = sessionStorage.getItem('name');
     for (let i = 0; i < usersObject.users.length; i += 1) {
-        if (session === usersObject.users[i].name) {
-            document.title = 'Game';
+        if (session == usersObject.users[i].name) {
+            document.title = 'Start Screen';
+            document.location = '#StartScreen';
             browser.hideScreens();
             browser.showScreen('startScreen');
         }
@@ -80,8 +82,11 @@ function loginSuccessful(txt) {
         message.className = '';
     }, 500);
 
+    window.location.reload();
+
     setTimeout(function () {
         document.title = 'Game';
+        document.location = '#StartScreen';
         browser.hideScreens();
         browser.showScreen('startScreen');
     }, 1000);
