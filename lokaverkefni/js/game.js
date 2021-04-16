@@ -4,6 +4,7 @@ const textObject = JSON.parse(gameTextJson);
 const startGameBtn = document.getElementById("start-game-btn");
 const exitGameBtn = document.getElementById('exit-game-btn');
 const goBackBtn = document.getElementById('exit-btn');
+const restartBtn = document.getElementById('restart-btn');
 const gameOptions = document.getElementById('options');
 const displayText = sessionStorage.getItem("displayText");
 
@@ -42,7 +43,7 @@ window.addEventListener('load', () => {
     if (sessionStorage.getItem('gameRunning') === "true") {
         browser.hideScreens();
         browser.showScreen('game');
-        document.title = 'Game has started';
+        document.title = 'Game';
         document.location = '#GameStarted';
     }
 });
@@ -50,7 +51,7 @@ window.addEventListener('load', () => {
 // Start Screen
 // When game option start on start screen is clicked
 startGameBtn.addEventListener("click", () => {
-    document.title = 'Game has started';
+    document.title = 'Game';
     browser.hideScreens();
     browser.showScreen('game');
     document.location = '#GameStarted';
@@ -73,3 +74,9 @@ goBackBtn.addEventListener('click', () => {
     sessionStorage.setItem('gameRunning', false);
     sessionStorage.setItem('displayText', 0);
 });
+
+// When restart button on the game screen is clicked
+restartBtn.addEventListener('click', () => {
+    location.reload();
+    sessionStorage.setItem('displayText', 0);
+})

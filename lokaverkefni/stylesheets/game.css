@@ -10,17 +10,30 @@
     height: 100vh;
 }
 
-#exit-btn {
+#game-top {
     position: absolute;
-    display: block;
-    padding: 10px 0px 0px 10px;
+    display: flex;
+}
+
+#exit-btn {
+    position: relative;
+    display: flex;
+    padding: 10px 10px;
     font-size: 18px;
 }
 
+#restart-btn:hover, 
 #exit-btn:hover {
     cursor: pointer;
     color: #2795fc;
     opacity: 0.8;
+}
+
+#restart-btn {
+    position: relative;
+    display: flex;
+    padding: 10px 15px;
+    font-size: 18px;
 }
 
 #game-text-container {
