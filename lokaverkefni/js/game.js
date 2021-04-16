@@ -6,7 +6,17 @@ const exitGameBtn = document.getElementById('exit-game-btn');
 const goBackBtn = document.getElementById('exit-btn');
 const restartBtn = document.getElementById('restart-btn');
 const gameOptions = document.getElementById('options');
+
+const displayTitle = sessionStorage.getItem("displayTitle");
 const displayText = sessionStorage.getItem("displayText");
+
+function getTitlesList(arr) {
+    const tempArray = [];
+    for (const key in arr) {
+        tempArray.push(key);
+    }
+    return tempArray;
+}
 
 function getOptionsList(arr) {
     const tempArray = [];
@@ -14,6 +24,10 @@ function getOptionsList(arr) {
         tempArray.push(key);
     }
     return tempArray;
+}
+
+if (sessionStorage.getItem("displayTitle") === null){
+    sessionStorage.setItem('displayTitle', 0);
 }
 
 if (sessionStorage.getItem("displayText") === null){
@@ -24,6 +38,9 @@ if (sessionStorage.getItem("displayText") === null){
 window.addEventListener('load', () => {
     let session = sessionStorage.getItem('name');
     document.getElementById('name').innerHTML = session;
+    
+    const titleHTML = document.getElementById('game-header');
+    titleHTML.innerHTML = textObject.text[displayText].title;
 
     const textHTML = document.getElementById('game-text');
     textHTML.innerHTML = textObject.text[displayText].text;
@@ -73,10 +90,12 @@ goBackBtn.addEventListener('click', () => {
     location.reload();
     sessionStorage.setItem('gameRunning', false);
     sessionStorage.setItem('displayText', 0);
+    sessionStorage.setItem('displayTitle', 0);
 });
 
 // When restart button on the game screen is clicked
 restartBtn.addEventListener('click', () => {
     location.reload();
     sessionStorage.setItem('displayText', 0);
+    sessionStorage.setItem('displayTitle', 0);
 })
