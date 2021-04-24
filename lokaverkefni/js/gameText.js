@@ -3,7 +3,7 @@ const texts =`{
         {
             "id": 0,
             "title": "THE MYSTERIOUS CAVE",
-            "text": "You wake up in a dungeon surrounded by eggs of an unknown creature. <br><br> A growl echoes and gets closer to you every second, you see a sword on your left side and an exit on the right.",
+            "text": "You wake up in a cave surrounded by eggs of an unknown creature. <br><br> A growl echoes and gets closer to you every second, you see a sword on your left side and an exit on the right.",
             "options": {
                 "Go left (take the sword)": 1,
                 "Go right (exit the cave)": 2
