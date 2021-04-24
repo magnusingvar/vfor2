@@ -1,61 +1,72 @@
-const browser = {
-    init() {
-        browser.hideScreens();
-        browser.showScreen('login-container');
-    },
+function init() {
+    hideScreens();
+    showScreen('login-container');
+}
 
-    hideScreens(){
-        const screens = document.getElementsByClassName('layer');
+function hideScreens() {
+    const screens = document.getElementsByClassName('layer');
 
-        for (let i = screens.length - 1; i >= 0; i -= 1){
-            const screen = screens[i];
-    
-            screen.style.display = 'none';
-        }
-    },
+    for (let i = screens.length - 1; i >= 0; i -= 1){
+        const screen = screens[i];
 
-    hideScreen(id){
-        const screen = document.getElementById(id);
-    
         screen.style.display = 'none';
-    },
+    }
+}
 
-    showScreen(id){
-        const screen = document.getElementById(id);
+function hideScreen(id){
+    const screen = document.getElementById(id);
     
-        screen.style.display = 'block';
-    },
+    screen.style.display = 'none';
+}
 
-    scale: 1,
-    resize() {
-        const maxWidth = window.innerWidth;
-        const maxHeight = window.innerHeight;
+function showScreen(id) {
+    const screen = document.getElementById(id);
     
-        const scale = Math.min(maxWidth / 15, maxHeight / 100);
-        const loginScale = Math.min(maxWidth / 132, maxHeight / 360);
+    screen.style.display = 'block';
+}
 
-        const container = document.getElementById('container');
-        const test = document.getElementById('login-container');
+function resize() {
+    scale: 1;
+    const maxWidth = window.innerWidth;
+    const maxHeight = window.innerHeight;
 
-        container.style.transform = `${'translate(-50%, -50%0} scale('}${scale})`;
-        test.style.transform = `${'translate(-50%, -50%0} scale('}${loginScale})`;
+    const scale = Math.min(maxWidth / 205, maxHeight / 360);
+    const loginScale = Math.min(maxWidth / 205, maxHeight / 360);
+    const startScale = Math.min(maxWidth / 205, maxHeight / 360);
+    const gameScale = Math.min(maxWidth / 205, maxHeight / 360);
 
-        browser.scale = scale;
+    const container = document.getElementById('container');
+    const loginContainer = document.getElementById('login-container');
+    const startContainer = document.getElementById('startScreen');
+    const gameContainer = document.getElementById('game');
 
-        const width = Math.max(50, Math.min(100, maxWidth / scale));
-        const testWidth = Math.max(132, Math.min(340, maxWidth / loginScale));
+    container.style.transform = `${'translate(50%, -50%0} scale('}${scale})`;
+    loginContainer.style.transform = `${'translate(-50%, -50%0} scale('}${loginScale})`;
+    gameContainer.style.transform = `{'translate(-50%, -50%0} scale('}${gameScale})`;
 
-        container.style.width = `${width}%`;
-        test.style.width = `${testWidth}px`;
+    // Assig scale to window and use scale.
+    window.scale = scale;
 
-    },
-};
+    const width = Math.max(205, Math.min(800, maxWidth / scale));
+    const loginWidth = Math.max(205, Math.min(340, maxWidth / loginScale));
+    const startWidth = Math.max(205, Math.min(1000, maxWidth / startScale));
+    const gameWidth = Math.max(205, Math.min(700, maxWidth / gameScale));
 
+    container.style.width = `${width}px`;
+    loginContainer.style.width = `${loginWidth}px`;
+    startContainer.style.width = `${startWidth}px`;
+    gameContainer.style.width = `${gameWidth}px`;
+}
+
+// When browser windows loads run resize()
+// and init () function.
 window.addEventListener('load', () => {
-    browser.resize();
-    browser.init();
+    resize();
+    init();
 }, false);
 
-window,addEventListener('resize', () => {
-    browser.resize();
+// When browser is rezised run the resize()
+// function.
+window.addEventListener('resize', () => {
+    resize();
 });

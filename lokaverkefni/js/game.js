@@ -58,8 +58,8 @@ window.addEventListener('load', () => {
     }
 
     if (sessionStorage.getItem('gameRunning') === "true") {
-        browser.hideScreens();
-        browser.showScreen('game');
+        hideScreens();
+        showScreen('game');
         document.title = 'Game';
         document.location = '#GameStarted';
     }
@@ -69,8 +69,8 @@ window.addEventListener('load', () => {
 // When game option start on start screen is clicked
 startGameBtn.addEventListener("click", () => {
     document.title = 'Game';
-    browser.hideScreens();
-    browser.showScreen('game');
+    hideScreens();
+    showScreen('game');
     document.location = '#GameStarted';
     sessionStorage.setItem('gameRunning', true);
 });
@@ -79,8 +79,8 @@ startGameBtn.addEventListener("click", () => {
 exitGameBtn.addEventListener('click', () => {
     document.title = 'Login';
     sessionStorage.removeItem('name');
-    browser.hideScreens();
-    browser.showScreen('login-container');
+    hideScreens();
+    showScreen('login-container');
     document.location = '#Login';
 });
 

@@ -15,8 +15,8 @@ window.addEventListener('load',() => {
         if (session == usersObject.users[i].name) {
             document.title = 'Start Screen';
             document.location = '#StartScreen';
-            browser.hideScreens();
-            browser.showScreen('startScreen');
+            hideScreens();
+            showScreen('startScreen');
         }
     }  
     pswrdChck.checked = false;

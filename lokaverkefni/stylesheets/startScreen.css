@@ -4,12 +4,18 @@
     padding: 0;
 }
 
+#startScreenHeader {
+    max-width: 400px;   
+    display: block;
+    text-align: center;
+    margin: 20px auto 15px auto;
+}
+
 #game-title {
     position: relative;
     display: block;
-    margin: 40px auto 15px auto;
     text-align: center;
-    font-size: 4rem;
+    font-size:calc(2rem + 1.5vw);
 }
 
 #game-by {
@@ -27,6 +33,7 @@
 }
 
 #game-options {
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
 }
@@ -43,42 +50,3 @@
     opacity: 0.7;
     color: #2795fc;
 }
-
-/* #startScreen {
-    position: absolute;
-}
-
-#game-options {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#game-title {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 40px 10px 10px 10px;
-    font-size: 2rem;
-}
-
-#game-by {
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-#welcome {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.game-option {
-    display: block;
-}
-
-.game-option:hover {
-    color: violet;
-    cursor: pointer;
-} */

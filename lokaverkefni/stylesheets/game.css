@@ -2,11 +2,11 @@
     position: relative;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
 #game-container {
-    min-height: 90vh;
-    height: auto;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,6 +15,7 @@
 #game-top {
     position: relative;
     display: flex;
+    margin: 10px 0px;
 }
 
 #exit-btn {
