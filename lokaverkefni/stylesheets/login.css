@@ -7,14 +7,6 @@
     border-radius: 15px;
 }
 
-#top {
-    position: relative;
-}
-
-#middle {
-    position: relative;
-}
-
 #bottom {
     position: relative;
     display: flex;
@@ -59,14 +51,7 @@ input[type='password'] {
     outline: none;
 }
 
-#show-pswrd-btn-container {
-    display: flex;
-    flex-grow: 1;
-    margin: 4px 0px;
-    width: auto;
-    height: 30px;
-}
-
+#show-pswrd-btn-container,
 #login-btn-container {
     display: flex;
     flex-grow: 1;
@@ -94,13 +79,12 @@ input[type='password'] {
 #message-container {
     position: relative;
     display: flex;
-    max-height: 105px;
-    min-height: 42px;
+    flex-wrap: wrap;
     height: auto;
     padding: 10px 20px;
 }
 
-#message {
+/* #message {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -108,7 +92,7 @@ input[type='password'] {
     font-size: 1.1rem;
     height: auto;
     margin: 0;
-}
+} */
 
 .success {
     color: rgb(8, 255, 8);

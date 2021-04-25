@@ -61,7 +61,6 @@ window.addEventListener('load', () => {
         hideScreens();
         showScreen('game');
         document.title = 'Game';
-        document.location = '#GameStarted';
     }
 });
 
@@ -71,7 +70,6 @@ startGameBtn.addEventListener("click", () => {
     document.title = 'Game';
     hideScreens();
     showScreen('game');
-    document.location = '#GameStarted';
     sessionStorage.setItem('gameRunning', true);
 });
 
@@ -81,7 +79,6 @@ exitGameBtn.addEventListener('click', () => {
     sessionStorage.removeItem('name');
     hideScreens();
     showScreen('login-container');
-    document.location = '#Login';
 });
 
 // Game

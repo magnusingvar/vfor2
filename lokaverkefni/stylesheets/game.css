@@ -12,10 +12,10 @@
 #game-top {
     position: relative;
     display: flex;
-    margin: 10px 0px;
+    margin: 10px 10px;
 }
 
-#exit-btn {
+#exit-btn, #restart-btn {
     position: relative;
     display: flex;
     padding: 10px 10px;
@@ -27,13 +27,6 @@
     cursor: pointer;
     color: #2795fc;
     opacity: 0.8;
-}
-
-#restart-btn {
-    position: relative;
-    display: flex;
-    padding: 10px 15px;
-    font-size: 18px;
 }
 
 #game-content-container {
