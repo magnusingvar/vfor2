@@ -30,7 +30,7 @@ function resize() {
     const maxWidth = window.innerWidth;
     const maxHeight = window.innerHeight;
 
-    const scale = Math.min(maxWidth / 640, maxHeight / 480);
+    const scale = Math.min(maxWidth / 660, maxHeight / 480);
 
     const container = document.getElementById('container');
 
@@ -39,7 +39,7 @@ function resize() {
     // Assign scale to window and use scale.
     window.scale = scale;
 
-    const width = Math.max(205, Math.min(800, maxWidth / scale));
+    const width = Math.max(660, Math.min(1920, maxWidth / scale));
     
     container.style.width = `${width}px`;
 }
