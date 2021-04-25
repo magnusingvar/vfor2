@@ -2,7 +2,6 @@
 
 * {
     font-family: 'Roboto', sans-serif;
-    user-select: none;
     box-sizing: border-box;
 }
 
@@ -10,9 +9,39 @@ body {
     margin: 0; /*444242*/ /* 282828 */
     background: #181818 /*302f2f*/;
     color: #fff;
-    overflow-x: hidden;
+    overflow: hidden;
     -webkit-touch-callout: none !important;
 }
+
+#wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 640px;
+    height: 480px;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+
 
 /* Checkbox */
 .chck-box-container {

@@ -1,9 +1,3 @@
-#startScreen {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-}
-
 #startScreenHeader {
     max-width: 400px;   
     display: block;
@@ -15,7 +9,8 @@
     position: relative;
     display: block;
     text-align: center;
-    font-size:calc(2rem + 1.5vw);
+    font-size: 3rem;
+    /* font-size:calc(2rem + 1.5vw); */
 }
 
 #game-by {

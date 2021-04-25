@@ -30,32 +30,18 @@ function resize() {
     const maxWidth = window.innerWidth;
     const maxHeight = window.innerHeight;
 
-    const scale = Math.min(maxWidth / 205, maxHeight / 360);
-    const loginScale = Math.min(maxWidth / 205, maxHeight / 360);
-    const startScale = Math.min(maxWidth / 205, maxHeight / 360);
-    const gameScale = Math.min(maxWidth / 205, maxHeight / 360);
+    const scale = Math.min(maxWidth / 640, maxHeight / 480);
 
     const container = document.getElementById('container');
-    const loginContainer = document.getElementById('login-container');
-    const startContainer = document.getElementById('startScreen');
-    const gameContainer = document.getElementById('game');
 
-    container.style.transform = `${'translate(50%, -50%0} scale('}${scale})`;
-    loginContainer.style.transform = `${'translate(-50%, -50%0} scale('}${loginScale})`;
-    gameContainer.style.transform = `{'translate(-50%, -50%0} scale('}${gameScale})`;
+    container.style.transform = `${'translate(-50%, -50%) scale('}${scale})`;
 
-    // Assig scale to window and use scale.
+    // Assign scale to window and use scale.
     window.scale = scale;
 
     const width = Math.max(205, Math.min(800, maxWidth / scale));
-    const loginWidth = Math.max(205, Math.min(340, maxWidth / loginScale));
-    const startWidth = Math.max(205, Math.min(1000, maxWidth / startScale));
-    const gameWidth = Math.max(205, Math.min(700, maxWidth / gameScale));
-
+    
     container.style.width = `${width}px`;
-    loginContainer.style.width = `${loginWidth}px`;
-    startContainer.style.width = `${startWidth}px`;
-    gameContainer.style.width = `${gameWidth}px`;
 }
 
 // When browser windows loads run resize()

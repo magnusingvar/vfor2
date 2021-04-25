@@ -1,15 +1,12 @@
-#game {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-}
-
 #game-container {
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 640px;
+    height: 480px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
 }
 
 #game-top {
@@ -40,7 +37,7 @@
 }
 
 #game-content-container {
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
