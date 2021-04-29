@@ -26,21 +26,19 @@ function showScreen(id) {
 }
 
 function resize() {
-    scale: 1;
     const maxWidth = window.innerWidth;
     const maxHeight = window.innerHeight;
 
-    const scale = Math.min(maxWidth / 660, maxHeight / 480);
-
+    const scale = Math.min(maxWidth / 660, maxHeight / 540);
     const container = document.getElementById('container');
 
     container.style.transform = `${'translate(-50%, -50%) scale('}${scale})`;
-
+    
     // Assign scale to window and use scale.
     window.scale = scale;
-
-    const width = Math.max(660, Math.min(1920, maxWidth / scale));
     
+    const width = Math.max(660, Math.min(1920, maxWidth / scale));
+
     container.style.width = `${width}px`;
 }
 

@@ -7,16 +7,7 @@ const goBackBtn = document.getElementById('exit-btn');
 const restartBtn = document.getElementById('restart-btn');
 const gameOptions = document.getElementById('options');
 
-const displayTitle = sessionStorage.getItem("displayTitle");
 const displayText = sessionStorage.getItem("displayText");
-
-function getTitlesList(arr) {
-    const tempArray = [];
-    for (const key in arr) {
-        tempArray.push(key);
-    }
-    return tempArray;
-}
 
 function getOptionsList(arr) {
     const tempArray = [];
@@ -26,22 +17,20 @@ function getOptionsList(arr) {
     return tempArray;
 }
 
-if (sessionStorage.getItem("displayTitle") === null){
-    sessionStorage.setItem('displayTitle', 0);
-}
-
 if (sessionStorage.getItem("displayText") === null){
     sessionStorage.setItem('displayText', 0);
-}
+};
 
 // When browser/ window loads up on the start screen
 window.addEventListener('load', () => {
     let session = sessionStorage.getItem('name');
     document.getElementById('name').innerHTML = session;
     
+    // Apply chapter title to game header container element
     const titleHTML = document.getElementById('game-header');
     titleHTML.innerHTML = textObject.text[displayText].title;
 
+    // Assign text to game container element
     const textHTML = document.getElementById('game-text');
     textHTML.innerHTML = textObject.text[displayText].text;
     const options = getOptionsList(textObject.text[displayText].options);
@@ -86,13 +75,10 @@ exitGameBtn.addEventListener('click', () => {
 goBackBtn.addEventListener('click', () => {
     location.reload();
     sessionStorage.setItem('gameRunning', false);
-    sessionStorage.setItem('displayText', 0);
-    sessionStorage.setItem('displayTitle', 0);
 });
 
 // When restart button on the game screen is clicked
 restartBtn.addEventListener('click', () => {
     location.reload();
     sessionStorage.setItem('displayText', 0);
-    sessionStorage.setItem('displayTitle', 0);
 })

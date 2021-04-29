@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
-
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0; /*444242*/ /* 282828 */
-    background: #181818 /*302f2f*/;
+    margin: 0;
+    background: #151515;
     color: #fff;
     overflow: hidden;
     -webkit-touch-callout: none !important;
@@ -23,17 +21,17 @@ body {
 }
 
 #container {
+    background: #181818;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 640px;
-    height: 480px;
-
     transform: translate(-50%, -50%);
     transform-origin: center center;
+    width: 620px;
+    height: 540px;
 }
 
 .layer {
@@ -42,7 +40,6 @@ body {
     position: absolute;
     display: none;
 }
-
 
 /* Checkbox */
 .chck-box-container {
@@ -94,7 +91,7 @@ body {
 }
 
 .chck-box-container input:checked ~ .checkmark {
-    background-color: #2795fc; /*#5e5e5e;*/
+    background-color: #2795fc;
 }
 
 .checkmark:after {

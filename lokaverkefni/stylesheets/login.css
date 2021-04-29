@@ -1,7 +1,7 @@
 #login-container {
     position: relative;
     display: none;
-    background-color: #252525; /*4b4a4a*/
+    background-color: #252525;
     max-width: 320px;
     height: 360px;
     border-radius: 15px;
@@ -83,16 +83,6 @@ input[type='password'] {
     height: auto;
     padding: 10px 20px;
 }
-
-/* #message {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    font-size: 1.1rem;
-    height: auto;
-    margin: 0;
-} */
 
 .success {
     color: rgb(8, 255, 8);
