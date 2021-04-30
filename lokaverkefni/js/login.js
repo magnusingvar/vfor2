@@ -1,6 +1,8 @@
 import usersJson from './users.js';
 
 const usersObject = JSON.parse(usersJson);
+const usernameInput = document.getElementById('username');
+const passwordInput = document.getElementById('password');
 const submitBtn = document.getElementById('login-btn');
 const pswrdChck = document.getElementById('pswrd-chck-box');
 const message = document.getElementById('message');
@@ -18,6 +20,15 @@ window.addEventListener('load',() => {
         }
     }  
     pswrdChck.checked = false;
+});
+
+// Make the input in username and password lowercase 
+usernameInput.addEventListener('input', () => {
+    forceLower(usernameInput);
+});
+
+passwordInput.addEventListener('input', () => {
+    forceLower(passwordInput);
 });
 
 // Check if login button is clicked by user
@@ -54,6 +65,11 @@ pswrdChck.addEventListener('click', () => {
         password.type = 'password';
     }
 });
+
+// Force the input to be lowercase
+function forceLower(usrInput) {
+    usrInput.value=usrInput.value.toLowerCase();
+}
 
 // If login is not successful assign message div with the class error
 // and insert the text assigned to the function and after 6 seconds
