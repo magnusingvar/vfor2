@@ -1,4 +1,4 @@
-const texts =`{ 
+const texts = `{ 
     "text": [
         {
             "id": 0,
@@ -22,12 +22,20 @@ const texts =`{
         {
             "id": 2,
             "title": "THE ESCAPE",
-            "text": "The creature sees you as you try to exit the cave. <br><br> You died."
+            "text": "The creature sees you as you try to exit the cave. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 3,
             "title": "THE DANGEROUS WAIT",
-            "text": "You get into the ground and put the slab over. <br><br> As the creature gets closer it steps on top of the slab, snapping it in half. The creature sees you and kills you. <br><br> You died."
+            "text": "You get into the ground and put the slab over. <br><br> As the creature gets closer it steps on top of the slab, snapping it in half. The creature sees you and kills you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 4,
@@ -51,12 +59,20 @@ const texts =`{
         {
             "id": 6,
             "title": "THE ESCAPE",
-            "text": "The creature sees you going for the exit, catching you and kills you. <br><br> You died."
+            "text": "The creature sees you going for the exit, catching you and kills you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 7,
             "title": "THE SCREAM",
-            "text": "The creature stares at you as you scream and eats you. <br><br> You died."
+            "text": "The creature stares at you as you scream and eats you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 8,
@@ -70,7 +86,11 @@ const texts =`{
         {
             "id": 9,
             "title": "THE WAIT",
-            "text": "You stay behind the rock, but the creature comes back, making it impossible for you to leave. <br><br> After some time you start to get hungry. <br><br> Your stomach starts grolwing, making the creature aware of your presence. <br><br> You died."
+            "text": "You stay behind the rock, but the creature comes back, making it impossible for you to leave. <br><br> After some time you start to get hungry. <br><br> Your stomach starts grolwing, making the creature aware of your presence. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 10,
@@ -93,12 +113,19 @@ const texts =`{
         {
             "id": 12,
             "title": "THE ATTACK",
-            "text": "You try and do some damage to the creature, but the mere size of it makes all your attacks ineffective. <br><br> The creature picks you up and puts you next to the other person. <br><br> You died."
+            "text": "You try and do some damage to the creature, but the mere size of it makes all your attacks ineffective. <br><br> The creature picks you up and puts you next to the other person. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 13,
             "title": "THE ALMIGHTY EXPLORATION",
-            "text": "You wander around the cave for some time, <br><br> After some hours you give up on finding exits. The creature slowly approaches you and kills you. <br><br> You died."
+            "text": "You wander around the cave for some time, <br><br> After some hours you give up on finding exits. The creature slowly approaches you and kills you. <br><br> You died.",
+            "options": {
+                "Play again": 0
+            }
         },
         {
             "id": 14,
@@ -131,7 +158,11 @@ const texts =`{
         {
             "id": 17,
             "title": "THE JAIL CELL",
-            "text": "You ignore the townsfolk and get arrested for being ignorant."
+            "text": "You ignore the townsfolk and get arrested for being ignorant.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 18,
@@ -145,12 +176,20 @@ const texts =`{
         {
             "id": 19,
             "title": "SCREAM",
-            "text": "You scream your lungs out, but no one can hear you. <br><br> You died."
+            "text": "You scream your lungs out, but no one can hear you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 20,
             "title": "GIVE UP",
-            "text": "You realise that nothing can be done to escape this creature, so you decide to give up. <br><br> You died."
+            "text": "You realise that nothing can be done to escape this creature, so you decide to give up. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 21,
@@ -182,12 +221,20 @@ const texts =`{
         {
             "id": 24,
             "title": "ENGARDE!",
-            "text": "You run at the creature and successfully slice off it's head."
+            "text": "You run at the creature and successfully slice off it's head.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 25,
             "title": "RUN AWAY",
-            "text": "You run away and are never seen again."
+            "text": "You run away and are never seen again.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 26,
@@ -201,22 +248,38 @@ const texts =`{
         {
             "id": 27,
             "title": "THE ATTACK",
-            "text": "You run at the creature, but your attacks are unsuccessful. <br><br> You died."
+            "text": "You run at the creature, but your attacks are unsuccessful. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 28,
             "title": "THE RUN",
-            "text": "You run away, returning to the town where you are beheaded for not completing the task assigned to you. <br><br> You died."
+            "text": "You run away, returning to the town where you are beheaded for not completing the task assigned to you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 29,
             "title": "THE FIGHT",
-            "text": "You use all of your power to try and fight off the townsfolk, in the end all of your energy was depleated and you got arrested. <br><br> Shortly after it is decided to behead you. <br><br> You died."
+            "text": "You use all of your power to try and fight off the townsfolk, in the end all of your energy was depleated and you got arrested. <br><br> Shortly after it is decided to behead you. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         },
         {
             "id": 30,
             "title": "THE DEAL",
-            "text": "You make a deal with the townsfolk. <br><br> You give them all of your wealth and belongings and make yourself disappear. <br><br> You died."
+            "text": "You make a deal with the townsfolk. <br><br> You give them all of your wealth and belongings and make yourself disappear. <br><br> You died.",
+            "options": {
+                "Play again": 0,
+                "Exit": "Exit"
+            }
         }
     ]
 }`;

@@ -15,14 +15,15 @@
     margin: 10px 10px;
 }
 
-#exit-btn, #restart-btn {
+#exit-btn,
+#restart-btn {
     position: relative;
     display: flex;
     padding: 10px 10px;
     font-size: 18px;
 }
 
-#restart-btn:hover, 
+#restart-btn:hover,
 #exit-btn:hover {
     cursor: pointer;
     color: #2795fc;
@@ -83,5 +84,5 @@
 .option:hover {
     cursor: pointer;
     background: #255780;
-    opacity: .8;
+    opacity: 0.8;
 }

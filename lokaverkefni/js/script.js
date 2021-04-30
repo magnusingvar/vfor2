@@ -49,7 +49,7 @@ window.addEventListener('load', () => {
     init();
 }, false);
 
-// When browser is rezised run the resize()
+// When browser is resized run the resize()
 // function.
 window.addEventListener('resize', () => {
     resize();
