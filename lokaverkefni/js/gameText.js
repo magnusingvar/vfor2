@@ -124,7 +124,8 @@ const texts = `{
             "title": "THE ALMIGHTY EXPLORATION",
             "text": "You wander around the cave for some time, <br><br> After some hours you give up on finding exits. The creature slowly approaches you and kills you. <br><br> You died.",
             "options": {
-                "Play again": 0
+                "Play again": 0,
+                "Exit": "Exit"
             }
         },
         {
