@@ -22,7 +22,8 @@ window.addEventListener('load',() => {
     pswrdChck.checked = false;
 });
 
-// Make the input in username and password lowercase 
+// Make the input in username and password lowercase
+// while user is typing. 
 usernameInput.addEventListener('input', () => {
     forceLower(usernameInput);
 });
@@ -32,6 +33,9 @@ passwordInput.addEventListener('input', () => {
 });
 
 // Check if login button is clicked by user
+// and log in if values match the one in the 
+// users.js file and if not give appropriate
+// error or success message.
 submitBtn.addEventListener('click', () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -72,7 +76,7 @@ function forceLower(usrInput) {
 }
 
 // If login is not successful assign message div with the class error
-// and insert the text assigned to the function and after 6 seconds
+// and insert the text assigned to the function and after some seconds
 // make the text empty.
 function wrongLogin(txt) {
     message.innerHTML = txt;
@@ -94,7 +98,7 @@ function loginSuccessful(txt) {
         document.title = 'Redirecting...';
         message.innerHTML = '';
         message.className = '';
-    }, 500);
+    }, 1000);
 
     window.location.reload();
 
@@ -102,6 +106,6 @@ function loginSuccessful(txt) {
         document.title = 'Game';
         browser.hideScreens();
         browser.showScreen('startScreen');
-    }, 1000);
+    }, 1500);
     return false;
 }

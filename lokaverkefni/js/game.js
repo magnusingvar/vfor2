@@ -9,6 +9,9 @@ const gameOptions = document.getElementById('options');
 
 const displayText = sessionStorage.getItem('displayText');
 
+// Get all items from the options object
+// in the gameText.js file and put them
+// in an array that can be read.
 function getOptionsList(arr) {
     const tempArray = [];
     for (const key in arr) {
@@ -17,6 +20,8 @@ function getOptionsList(arr) {
     return tempArray;
 }
 
+// If displayText item is null then assign it 0
+// to make it show the first text
 if (sessionStorage.getItem('displayText') === null) {
     sessionStorage.setItem('displayText', 0);
 }
@@ -41,7 +46,7 @@ window.addEventListener('load', () => {
         button.innerHTML = options[i];
         button.addEventListener('click', () => {
             // If button id is "exit" run this code,
-            // else change text appropriate id.
+            // else change text to the appropriate id.
             if (button.id === 'Exit') {
                 sessionStorage.setItem('gameRunning', false);
                 sessionStorage.setItem('displayText', 0);
@@ -51,9 +56,13 @@ window.addEventListener('load', () => {
                 location.reload();
             }
         });
+        // Make buttons with the values
+        // that we got from the json file.
         gameOptions.appendChild(button);
     }
 
+    // If gameRunning is true then hide screens and show the game
+    // and change the document title.
     if (sessionStorage.getItem('gameRunning') === 'true') {
         hideScreens();
         showScreen('game');
@@ -71,6 +80,7 @@ startGameBtn.addEventListener('click', () => {
 });
 
 // When game option exit on start screen is clicked
+// remove the sessionStorage item for username
 exitGameBtn.addEventListener('click', () => {
     document.title = 'Login';
     sessionStorage.removeItem('name');
